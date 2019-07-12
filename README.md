@@ -1,6 +1,6 @@
 # vue-tutorial
 
-> Simple tutorial source code for 12/07/2019 Lunch & Learn Meeting
+> A Vue.js project
 
 ## Build Setup
 

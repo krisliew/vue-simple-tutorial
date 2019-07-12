@@ -1,5 +1,5 @@
 <template>
-    <!-- Part 6 -->
+    <!-- Part 5 -->
     <form v-on:submit.prevent="formSubmit">
         <h1>h1: This form is a Child Component (Form.vue) </h1>
 

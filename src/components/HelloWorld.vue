@@ -6,22 +6,23 @@
     <!-- Part 2 -->
     <p> Question: Do you like spicy food? </p>
     <button type="button" @click="changeState"> {{ Btn }} </button>
-    <button type="button" @click="elseState"> idk... </button>
-    
-    <!-- Part 3 -->
+
     <p v-if="Btn=='Yes'"> Ans: I love spicy food too! </p>
     <p v-else-if="Btn=='No'"> Ans: You are missing out... </p>
-    <p v-else> Ans: You don't know? Lets go eat now! </p>    
+    <p v-else> Ans: You don't know? Lets just have Lasagna for lunch! </p>    
 
-    <!-- Part 4 -->
+    <p>{{ ans }}</p>
+
+    <!-- Part 3 -->
     <h2> Vue for loop </h2>
     <ul v-for="food in foods" :key="food.foodId" >
       <li> Food ID {{food.foodId }} is {{ food.foodName}}</li>
     </ul>
 
-    <!-- Part 5 -->
+    <!-- Part 4 -->
     <button @click="showForm"> Show Form </button>
     <myForm v-show="Display==true"/>
+
   </div>
 </template>
 
@@ -59,12 +60,11 @@ export default {
     changeState(){
       if(this.Btn == 'Yes'){
         this.Btn = 'No'
+        this.ans = 'Ans2: Fantastic! Lets have Nasi Lemak for lunch!' // Option 2
       }else{
-        this.Btn = 'Yes'
+        this.Btn = 'Yes'        
+        this.ans = 'Ans2: Then what type of food do you like?' //Option 2
       }
-    },
-    elseState(){
-      this.Btn = 'Yes!'      
     },
     showForm(){
       this.Display = true
